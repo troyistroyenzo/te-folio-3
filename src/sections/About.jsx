@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Globe from 'react-globe.gl';
+// import Globe from 'react-globe.gl';
 import MaxWidthWrapper from '../components/MaxWidthWrapper'
 
-import Button from '../components/Button.jsx';
+// import Button from '../components/Button.jsx';
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -20,7 +20,7 @@ const About = () => {
     <>
     <MaxWidthWrapper className='flex flex-col items-center justify-center text-center font-inter'>
     <section className="c-space my-20" id="about">
-      <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
+      <div className="grid xl:grid-cols-2 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
             <img src="https://res.cloudinary.com/dlgyqy69b/image/upload/v1716715012/SEAN_KEN_3_hbrv9i.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />

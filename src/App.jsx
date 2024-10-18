@@ -8,13 +8,13 @@ import Clients from './sections/Clients.jsx';
 import WorkExperience from './sections/Experience.jsx';
 import Film from './sections/Film.jsx'
 
+
 const App = () => {
   return (
     <main className="max-w-7xl mx-auto relative">
-      {/* <Navbar /> */}
+      <Navbar />
       <Hero />
       <About />
-    
       <Film/>
       {/* <Clients /> */}
       <WorkExperience />

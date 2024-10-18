@@ -1,14 +1,12 @@
 import { useState } from 'react';
-
 import { navLinks } from '../constants/index.js';
-import TELogo from '/assets/TE.svg'
 import { Image } from '@chakra-ui/react';
 
 const Logo = () => {
   return (
     <Image
     alt={'Troy Enzo logo'}
-    src={TELogo}
+    src={'./assets/TE.svg'}
     width={65} // Set the desired width (50% smaller)
     height={65} // Set the desired height (50% smaller)
   />
@@ -38,7 +36,8 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center py-5 mx-auto c-space">
-          <Logo/>
+          {/* <Logo/> */}
+   
           
           <button
             onClick={toggleMenu}

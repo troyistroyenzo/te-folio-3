@@ -27,17 +27,13 @@ const Hero = () => {
     <section className="min-h-screen w-full flex flex-col relative" id="home">
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
         <p className="sm:text-3xl text-xl font-medium text-[#C2B498] text-center">
-          Hi, I'm Troy <span className="waving-hand">👋</span>
+          hi, i'm Troy <span className="waving-hand">👋</span>
         </p>
-        <h1 className="hero_tag text-[#C2B498]">I build startups & brands.</h1>    
+        <h1 className="hero_tag text-[#C2B498]">i build startups & brands.</h1>    
         <p className="sm:text-3xl text-xl font-medium text-[#C2B498] text-center">
-        you are probably here because you asked what i do. scroll down to see more
+        you are probably here because you asked what i do. scroll down to see more <span className="waving-hand">👀</span>
         </p>
-        <div className="flex flex-row justify-center items-center gap-4 mt-5">
-        <Button name="Contact Me" isBeam containerClass="w-auto"/>
-        <Button name="Book a call" className='bg-zinc-100'  containerClass="w-auto"/>
-      </div>
-        
+
       </div>
      
       <div className="w-full h-full absolute inset-0">
@@ -45,7 +41,7 @@ const Hero = () => {
           <Suspense fallback={<CanvasLoader />}>
             {/* To hide controller */}
             <Leva hidden />
-            <PerspectiveCamera makeDefault position={[0, 0, 30]} />
+            <PerspectiveCamera makeDefault position={[0, 0, 50]} />
 
             <HeroCamera isMobile={isMobile}>
               <HackerRoom scale={sizes.deskScale} position={sizes.deskPosition} rotation={[0.1, -Math.PI, 0]} />
@@ -64,11 +60,14 @@ const Hero = () => {
         </Canvas>
       </div>
 
-      {/* <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
-        <a href="#about" className="w-fit">
-          <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
+      <div className="absolute flex flex-row justify-center items-center  bottom-7 left-0 right-0 gap-4 mt-5 w-full z-10 c-space">
+        <a href="https://google.com" target="_blank">
+          <Button name="Contact Me" isBeam containerClass="bg-zinc-900 sm:w-fit w-full sm:min-w-96" />
         </a>
-      </div> */}
+        <a href="https://google.com" target="_blank">
+          <Button name="Book a call" containerClass="bg-[#C2B498] sm:w-fit w-full sm:min-w-96" />
+        </a>
+      </div>
     </section>
   );
 };
