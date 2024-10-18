@@ -10,11 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.10.3",
     "@emailjs/browser": "^4.4.1",
     "@gsap/react": "^2.1.1",
     "@react-three/drei": "^9.111.3",
     "@react-three/fiber": "^8.17.6",
     "@types/three": "^0.168.0",
+    "clsx": "^2.1.1",
     "gsap": "^3.12.5",
     "leva": "^0.9.35",
     "maath": "^0.10.8",
@@ -22,7 +24,9 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-globe.gl": "^2.27.2",
+    "react-icons": "^5.3.0",
     "react-responsive": "^10.0.0",
+    "tailwind-merge": "^2.5.4",
     "three": "^0.167.1",
     "three-stdlib": "^2.32.2"
   },
