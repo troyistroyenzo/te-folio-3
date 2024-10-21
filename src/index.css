@@ -64,8 +64,7 @@ body {
 
   /* about section */
   .grid-container {
-    @apply w-full h-full border border-black-300 rounded-lg sm:p-7 p-4 flex flex-col gap-5;
-    background: linear-gradient(to bottom, #0f172a, #020617);
+    @apply w-full h-full border border-black-300 rounded-lg sm:p-10 p-4 flex flex-col gap-5;
   }
   
   .grid-headtext {
@@ -113,7 +112,6 @@ body {
 
   .work-content {
     @apply col-span-2 rounded-lg border-black-300;
-    background: linear-gradient(to bottom, #2D1B69, #190B35);
   }
 
   .work-content_container {

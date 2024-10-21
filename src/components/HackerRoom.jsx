@@ -12,7 +12,7 @@ export function HackerRoom(props) {
   const { nodes, materials } = useGLTF('/models/hacker-room.glb');
 
   const monitortxt = useTexture('textures/desk/monitor.png');
-  const screenTxt = useVideoTexture('assets/videos/video.mov');
+  const screenTxt = useVideoTexture('https://res.cloudinary.com/dlgyqy69b/video/upload/v1729487771/ukvhvphp6aw0dwnwyutw.mov');
   
   return (
     <group {...props} dispose={null}>
