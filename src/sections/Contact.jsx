@@ -65,17 +65,16 @@ const Contact = () => {
   };
 
   return (
-    <section className="c-space my-20" id="contact">
+    <section className="text-[#C2B498] c-space my-20" id="contact">
       {alert.show && <Alert {...alert} />}
 
-      <div className="relative min-h-screen flex items-center justify-center flex-col">
+      <div className= "text-[#C2B498] relative min-h-screen flex items-center justify-center flex-col">
   
 
         <div className="contact-container">
           <h3 className="head-text">Say Hello!</h3>
-          <p className="text-lg text-white-600 mt-3">
-            Whether you’re looking to build a new website, improve your existing platform, or bring a unique project to
-            life, I’m here to help.
+          <p className="text-lg mt-3">
+            Got something in mind that you want to build or collaborate on? Send me a message :)
           </p>
 
           <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">

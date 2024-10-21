@@ -15,8 +15,8 @@ const WorkExperience = () => {
         {/* <p className="head-text">Startups</p> */}
 
 
-          <div className="work-content">
-            <div className="sm:py-10 py-5 sm:px-5 px-2.5">
+          <div className="work-content text-[#C2B498]">
+            <div className="sm:py-10 pd-10 py-5 sm:px-5 px-2.5">
               {workExperiences.map((item, index) => (
                 <div
                   key={index}
@@ -27,7 +27,7 @@ const WorkExperience = () => {
                   onPointerOver={() => setAnimationName(item.animation.toLowerCase())}
                   onPointerOut={() => setAnimationName('idle')}
                   className="work-content_container group">
-                  <div className="flex flex-col h-full justify-start items-center py-2">
+                  <div className="flex flex-col h-full justify-start items-center py-7">
                     <div className="work-content_logo">
                       <img className="w-full h-full" src={item.icon} alt="" />
                     </div>
@@ -35,7 +35,7 @@ const WorkExperience = () => {
                     
                   </div>
 
-                  <div className="sm:p-5 px-2.5 py-5">
+                  <div className="sm:p-5 px-2.5 p-5">
                     <p className="font-bold text-white-800">{item.name}</p>
                     {/* <p className="text-sm mb-5">
                       {item.pos} -- <span>{item.duration}</span>

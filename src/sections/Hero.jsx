@@ -61,10 +61,10 @@ const Hero = () => {
       </div>
 
       <div className="absolute flex flex-row justify-center items-center  bottom-7 left-0 right-0 gap-4 mt-5 w-full z-10 c-space">
-        <a href="https://google.com" target="_blank">
+        <a href="https://poplme.co/hash/JjvF98f1/1/s" target="_blank">
           <Button name="Contact Me" isBeam containerClass="bg-zinc-900 sm:w-fit w-full sm:min-w-96" />
         </a>
-        <a href="https://google.com" target="_blank">
+        <a href="https://calendly.com/troyenzo/30min" target="_blank">
           <Button name="Book a call" containerClass="bg-[#C2B498] sm:w-fit w-full sm:min-w-96" />
         </a>
       </div>

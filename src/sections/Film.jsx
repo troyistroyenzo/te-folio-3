@@ -79,7 +79,7 @@ const Film = () => {
    
           <VideoEmbed videoUrl={currentProject.link} />
           <div className="flex flex-col gap-5 text-white-600 my-5">
-            <p className="text-white text-2xl font-semibold animatedText">{currentProject.title}</p>
+            <p className="text-[#C2B498] text-2xl font-semibold animatedText">{currentProject.title}</p>
 
             <p className="animatedText">{currentProject.desc}</p>
           </div>
