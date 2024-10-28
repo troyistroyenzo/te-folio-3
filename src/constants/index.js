@@ -64,6 +64,11 @@ export const myProjects = [
     link: 'https://www.youtube.com/watch?v=_Npc61m8NiI',
   },
   {
+    title: 'KMiz - Love Harder',
+    desc: 'Videographer + BTS',
+    link: 'https://www.youtube.com/watch?v=U2WzoiQX_Ts',
+  },
+  {
     title: 'Hello Charlie NFT Trailer',
     desc: 'Director, Editor, Creative Director & Main Cinematographer',
     link: 'https://vimeo.com/762138188',
