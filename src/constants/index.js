@@ -113,46 +113,100 @@ export const myProjects = [
 ];
 
 
-// export const myProjects = [
-//   {
-//     title: 'Podcastr - AI Podcast Platform',
-//     desc: 'Podcastr is a revolutionary Software-as-a-Service platform that transforms the way podcasts are created. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
-//     subdesc:
-//       'Built as a unique Software-as-a-Service app with Next.js 14, Tailwind CSS, TypeScript, Framer Motion and Convex, Podcastr is designed for optimal performance and scalability.',
-//     href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
-//     texture: '/textures/project/project1.mp4',
-//     logo: '/assets/project-logo1.png',
-//     logoStyle: {
-//       backgroundColor: '#2A1816',
-//       border: '0.2px solid #36201D',
-//       boxShadow: '0px 0px 60px 0px #AA3C304D',
-//     },
-//     spotlight: '/assets/spotlight1.png',
-//     tags: [
-//       {
-//         id: 1,
-//         name: 'React.js',
-//         path: '/assets/react.svg',
-//       },
-//       {
-//         id: 2,
-//         name: 'TailwindCSS',
-//         path: 'assets/tailwindcss.png',
-//       },
-//       {
-//         id: 3,
-//         name: 'TypeScript',
-//         path: '/assets/typescript.png',
-//       },
-//       {
-//         id: 4,
-//         name: 'Framer Motion',
-//         path: '/assets/framer.png',
-//       },
-//     ],
-//   }
+export const myCode = [
+  {
+    title: 'AskThisWebsite',
+    desc: 'A chat bot that you can train with custom data. ',
+    subdesc:
+      'It can chat with websites, PDFs and your custom data directly from Upstash (vector store)',
+    href: 'https://github.com/troyistroyenzo/askthiswebsite',
+    texture: '/textures/project/project1.mp4',
+    // logo: '/assets/project-logo1.png',
+    // logoStyle: {
+    //   backgroundColor: '#2A1816',
+    //   border: '0.2px solid #36201D',
+    //   boxShadow: '0px 0px 60px 0px #AA3C304D',
+    // },
+    spotlight: '/assets/spotlight1.png',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/assets/react.svg',
+      },
+      {
+        id: 2,
+        name: 'TailwindCSS',
+        path: 'assets/tailwindcss.png',
+      },
+      {
+        id: 3,
+        name: 'TypeScript',
+        path: '/assets/typescript.png',
+      },
+    ],
+  },
+  {
+    title: 'NFT Marketplace',
+    desc: 'Opensea Marketplace Clone',
+    subdesc:
+      'Upload, create and purchase NFTs through the thirdweb interface.',
+    href: 'https://github.com/troyistroyenzo/Google-NFT-Marketplace',
+    // https://www.instagram.com/troyenzo/reel/CbzSIJwpM3b/
+    texture: '/textures/project/project1.mp4',
+    // logo: '/assets/project-logo1.png',
+    // logoStyle: {
+    //   backgroundColor: '#2A1816',
+    //   border: '0.2px solid #36201D',
+    //   boxShadow: '0px 0px 60px 0px #AA3C304D',
+    // },
+    spotlight: '/assets/spotlight1.png',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/assets/react.svg',
+      },
+      {
+        id: 2,
+        name: 'TailwindCSS',
+        path: 'assets/tailwindcss.png',
+      },
+      {
+        id: 3,
+        name: 'TypeScript',
+        path: '/assets/typescript.png',
+      },
+    ],
+  },
+  {
+    title: 'NFT Minting Site',
+    desc: 'Mint custom created NFTs',
+    subdesc:
+      'Mint limited created NFTs on the etheruem network.',
+    href: 'https://github.com/troyistroyenzo/AlterMe',
+    texture: '/textures/project/project1.mp4',
+    spotlight: '/assets/spotlight1.png',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/assets/react.svg',
+      },
+      {
+        id: 2,
+        name: 'TailwindCSS',
+        path: 'assets/tailwindcss.png',
+      },
+      {
+        id: 3,
+        name: 'TypeScript',
+        path: '/assets/typescript.png',
+      },
+    ],
+  }
   
-// ];
+];
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
   return {
@@ -168,8 +222,8 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 export const workExperiences = [
   {
     id: 1,
-    name: 'MegaBliss Worldwide Pte Ltd',
-    title: "Unifying your blissful experiences - Hospitality - Tourism - Travel",
+    name: 'Megaride',
+    title: "A ride sharing app that connects you with your community through an efficient and eco-friendly carpooling",
     icon: 'https://megablissworldwide.com/wp-content/uploads/2023/11/SOCIALS-LOGO-4.png',
     link: 'https://megablissworldwide.com/',
     
