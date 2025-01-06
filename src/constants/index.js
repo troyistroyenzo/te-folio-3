@@ -19,6 +19,11 @@ export const navLinks = [
     name: 'Contact',
     href: '#contact',
   },
+  {
+    id: 5,
+    name: 'Pitch',
+    href: '/pitch',
+  },
 ];
 
 export const clientReviews = [
