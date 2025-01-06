@@ -4,13 +4,30 @@ import type { FC } from 'react';
 import { motion, useScroll } from 'framer-motion';
 import type { MotionValue } from 'framer-motion';
 
+const SLIDE_URLS = [
+  'https://res.cloudinary.com/dlgyqy69b/image/upload/v1736151590/1_p4bxw8.jpg',
+  'https://res.cloudinary.com/dlgyqy69b/image/upload/v1736151588/2_sddkm4.jpg',
+  'https://res.cloudinary.com/dlgyqy69b/image/upload/v1736151589/3_kbd8zd.jpg',
+  'https://res.cloudinary.com/dlgyqy69b/image/upload/v1736151589/4_wd5y1w.jpg',
+  'https://res.cloudinary.com/dlgyqy69b/image/upload/v1736151589/5_cahagn.jpg',
+  'https://res.cloudinary.com/dlgyqy69b/image/upload/v1736151589/6_ytfto7.jpg',
+  'https://res.cloudinary.com/dlgyqy69b/image/upload/v1736151589/7_adcm7i.jpg',
+  'https://res.cloudinary.com/dlgyqy69b/image/upload/v1736151589/8_wndiyu.jpg',
+  'https://res.cloudinary.com/dlgyqy69b/image/upload/v1736151589/9_mt3sy7.jpg',
+  'https://res.cloudinary.com/dlgyqy69b/image/upload/v1736151590/10_ea9hnb.jpg',
+  'https://res.cloudinary.com/dlgyqy69b/image/upload/v1736151590/11_p4wsxz.jpg',
+  'https://res.cloudinary.com/dlgyqy69b/image/upload/v1736151590/12_xmuopk.jpg',
+  'https://res.cloudinary.com/dlgyqy69b/image/upload/v1736151590/13_tzgjjf.jpg',
+  'https://res.cloudinary.com/dlgyqy69b/image/upload/v1736151590/14_kisqoj.jpg'
+];
+
 interface SlideProps {
   slideNumber: number;
-  totalSlides: number;
+  imageUrl: string;
   refCallback: (el: HTMLElement | null) => void;
 }
 
-const Slide: FC<SlideProps> = ({ slideNumber, refCallback }) => {
+const Slide: FC<SlideProps> = ({ slideNumber, imageUrl, refCallback }) => {
   return (
     <motion.section
       ref={refCallback}
@@ -28,7 +45,7 @@ const Slide: FC<SlideProps> = ({ slideNumber, refCallback }) => {
         transition={{ duration: 0.8 }}
       >
         <img
-          src={`/src/assets/images/${slideNumber}.jpg`}
+          src={imageUrl}
           alt={`Slide ${slideNumber}`}
           className="w-full h-full object-contain"
           loading={slideNumber === 1 ? "eager" : "lazy"}
@@ -91,7 +108,6 @@ const PitchPage: FC = () => {
   const { scrollYProgress } = useScroll();
   const [currentSlide, setCurrentSlide] = useState(1);
   const slidesRef = useRef<(HTMLElement | null)[]>([]);
-  const TOTAL_SLIDES = 14;
 
   useEffect(() => {
     const options = {
@@ -128,22 +144,22 @@ const PitchPage: FC = () => {
   return (
     <div className="bg-black">
       <ProgressBar progress={scrollYProgress} />
-      <SlideCounter current={currentSlide} total={TOTAL_SLIDES} />
+      <SlideCounter current={currentSlide} total={SLIDE_URLS.length} />
 
       <div className="snap-y snap-mandatory h-screen overflow-y-scroll">
-        {Array.from({ length: TOTAL_SLIDES }, (_, i) => i + 1).map((slideNumber) => (
+        {SLIDE_URLS.map((url, index) => (
           <Slide
-            key={slideNumber}
-            slideNumber={slideNumber}
-            totalSlides={TOTAL_SLIDES}
-            refCallback={(el) => slidesRef.current[slideNumber - 1] = el}
+            key={index + 1}
+            slideNumber={index + 1}
+            imageUrl={url}
+            refCallback={(el) => slidesRef.current[index] = el}
           />
         ))}
       </div>
 
       <NavigationDots
         current={currentSlide}
-        total={TOTAL_SLIDES}
+        total={SLIDE_URLS.length}
         onDotClick={handleDotClick}
       />
     </div>
