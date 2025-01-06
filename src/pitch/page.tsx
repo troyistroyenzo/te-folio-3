@@ -1,22 +1,39 @@
 // src/pitch/page.tsx
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useState, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const PitchPage: FC = () => {
   const { scrollYProgress } = useScroll();
   const [currentSlide, setCurrentSlide] = useState(1);
+  const slidesRef = useRef<(HTMLElement | null)[]>([]);
 
-  // Monitor scroll position to update current slide
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const currentSlideNumber = Math.floor(scrollPosition / windowHeight) + 1;
-      setCurrentSlide(currentSlideNumber);
+    // Create intersection observer
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5 // Trigger when slide is 50% visible
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const slideNumber = Number(entry.target.getAttribute('data-slide'));
+          setCurrentSlide(slideNumber);
+        }
+      });
+    }, options);
+
+    // Observe all slide elements
+    slidesRef.current.forEach(slide => {
+      if (slide) observer.observe(slide);
+    });
+
+    return () => {
+      slidesRef.current.forEach(slide => {
+        if (slide) observer.unobserve(slide);
+      });
+    };
   }, []);
 
   const slides = Array.from({ length: 14 }, (_, i) => i + 1);
@@ -30,20 +47,27 @@ const PitchPage: FC = () => {
       />
       
       {/* Slide counter */}
-      <div className="fixed top-4 right-4 text-white z-50 font-mono">
+      <motion.div 
+        className="fixed top-4 right-4 text-white z-50 font-mono"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+      >
         <span className="text-yellow-400">{currentSlide}</span>
         <span className="opacity-50">/14</span>
-      </div>
+      </motion.div>
 
       {/* Slides */}
       <div className="snap-y snap-mandatory h-screen overflow-y-scroll">
         {slides.map((slideNumber) => (
           <motion.section
             key={slideNumber}
+            ref={el => slidesRef.current[slideNumber - 1] = el}
+            data-slide={slideNumber}
             className="snap-start h-screen w-full relative flex items-center justify-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: false }}
+            viewport={{ once: false, amount: 0.5 }}
             transition={{ duration: 0.6 }}
           >
             <motion.div
@@ -56,7 +80,7 @@ const PitchPage: FC = () => {
                 src={`/src/assets/images/${slideNumber}.jpg`}
                 alt={`Slide ${slideNumber}`}
                 className="w-full h-full object-contain"
-                loading="eager"
+                loading={slideNumber === 1 ? "eager" : "lazy"}
               />
             </motion.div>
           </motion.section>
@@ -72,10 +96,8 @@ const PitchPage: FC = () => {
               currentSlide === slideNumber ? 'bg-yellow-400 w-4' : 'bg-white/50'
             }`}
             onClick={() => {
-              window.scrollTo({
-                top: (slideNumber - 1) * window.innerHeight,
-                behavior: 'smooth'
-              });
+              const element = slidesRef.current[slideNumber - 1];
+              element?.scrollIntoView({ behavior: 'smooth' });
             }}
             whileHover={{ scale: 1.5 }}
           />
