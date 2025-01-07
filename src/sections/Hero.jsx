@@ -13,7 +13,7 @@ import CanvasLoader from '../components/Loading.jsx';
 import HeroCamera from '../components/HeroCamera.jsx';
 import { calculateSizes } from '../constants/index.js';
 import { HackerRoom } from '../components/HackerRoom.jsx';
-import Button from '../components/Button.jsx';
+// import Button from '../components/Button.jsx';
 
 const Hero = () => {
   // Use media queries to determine screen size
@@ -27,11 +27,11 @@ const Hero = () => {
     <section className="min-h-screen w-full flex flex-col relative" id="home">
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
         <p className="sm:text-3xl text-xl font-medium text-[#C2B498] text-center">
-          hi, i'm Troy <span className="waving-hand">👋</span>
+          hi, I'm Troy <span className="waving-hand">👋</span>
         </p>
-        <h1 className="hero_tag text-[#C2B498]">i build startups & brands.</h1>    
-        <p className="sm:text-3xl text-xl font-medium text-[#C2B498] text-center">
-        you are probably here because you asked what i do. scroll down to see more <span className="waving-hand">👀</span>
+        <h1 className="hero_tag text-[#C2B498]">I build brand and startups</h1>    
+        <p className="sm:text-3xl text-xl font-medium text-white text-center">
+        I empower creators and founders to turn their struggles into success 
         </p>
 
       </div>
@@ -60,14 +60,14 @@ const Hero = () => {
         </Canvas>
       </div>
 
-      <div className="absolute flex flex-row justify-center items-center  bottom-7 left-0 right-0 gap-4 mt-5 w-full z-10 c-space">
+      {/* <div className="absolute flex flex-row justify-center items-center  bottom-7 left-0 right-0 gap-4 mt-5 w-full z-10 c-space">
         <a href="https://poplme.co/hash/JjvF98f1/1/s" target="_blank">
           <Button name="Contact Me" isBeam containerClass="bg-zinc-900 sm:w-fit w-full sm:min-w-96" />
         </a>
         <a href="https://calendly.com/troyenzo/30min" target="_blank">
           <Button name="Book a call" containerClass="bg-[#C2B498] sm:w-fit w-full sm:min-w-96" />
         </a>
-      </div>
+      </div> */}
     </section>
   );
 };

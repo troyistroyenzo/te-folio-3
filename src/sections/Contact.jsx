@@ -72,10 +72,10 @@ const Contact = () => {
   
 
         <div className="contact-container">
-          <h3 className="head-text">Say Hello!</h3>
-          <p className="text-lg mt-3">
-            Got something in mind that you want to build or collaborate on? Send me a message :)
-          </p>
+          <h1 className="text-6xl font-bold">Want to learn how to build your own brand and startup?</h1>
+          <h2 className="head-text text-2xl mt-3">
+           Opt In to get to join my email list and stay in the loop
+          </h2>
 
           <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
             <label className="space-y-3">
@@ -87,7 +87,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 className="field-input"
-                placeholder="ex., John Doe"
+                placeholder="Your Full Name ex., John Doe"
               />
             </label>
 
@@ -100,25 +100,13 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 className="field-input"
-                placeholder="ex., johndoe@gmail.com"
+                placeholder="Your Best Email ex., johndoe@gmail.com"
               />
             </label>
 
-            <label className="space-y-3">
-              <span className="field-label">Your message</span>
-              <textarea
-                name="message"
-                value={form.message}
-                onChange={handleChange}
-                required
-                rows={5}
-                className="field-input"
-                placeholder="Share your thoughts or inquiries..."
-              />
-            </label>
 
             <button className="field-btn" type="submit" disabled={loading}>
-              {loading ? 'Sending...' : 'Send Message'}
+              {loading ? 'Joining' : 'Join Email List'}
 
               <img src="/assets/arrow-up.png" alt="arrow-up" className="field-btn_arrow" />
             </button>

@@ -20,15 +20,14 @@ const About = () => {
     <>
     <MaxWidthWrapper className='flex flex-col items-center justify-center text-center font-inter'>
     <section className="c-space my-20" id="about">
-      <div className="grid xl:grid-cols-2 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
+      <div className="grid xl:grid-cols-1 xl:grid-rows-1 md:grid-cols-1 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
             <img src="https://res.cloudinary.com/dlgyqy69b/image/upload/v1716715012/SEAN_KEN_3_hbrv9i.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
-
             <div>
-              <p className="grid-headtext">Builder.</p>
+              <p className="grid-headtext">Build.</p>
               <p className="grid-subtext">
-              I help build and scale early-stage startups in the crypto and gaming sectors. With over 5 years of experience, I specialize in developing scalable web applications. I have successfully supported multiple startups in gaming, Web3, and AI, delivering efficient solutions tailored to their needs.
+              I build and scale early-stage startups.
               </p>
             </div>
           </div>
@@ -39,9 +38,9 @@ const About = () => {
             <img src="https://res.cloudinary.com/dlgyqy69b/image/upload/v1716711169/5_tq73qo.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain" />
 
             <div>
-              <p className="grid-headtext">Venture</p>
+              <p className="grid-headtext">Venture.</p>
               <p className="grid-subtext">
-              I venture into different startups, projects and businesses. My goal is to provide value and solve particular problems in the industry.
+              I venture into different startups, projects and businesses.
               </p>
             </div>
           </div>
@@ -52,9 +51,9 @@ const About = () => {
             <img src="https://res.cloudinary.com/dlgyqy69b/image/upload/v1716711169/4_gu0iba.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain" />
 
             <div>
-              <p className="grid-headtext">Create</p>
+              <p className="grid-headtext">Create.</p>
               <p className="grid-subtext">
-              I create content through visuals & stoyytelling, mainly on instagram
+              I help creators turn their struggles into success.
               </p>
             </div>
           </div>
@@ -65,9 +64,9 @@ const About = () => {
             <img src="https://res.cloudinary.com/dlgyqy69b/image/upload/v1716707622/SEAN_KEN_2_xsf0kr.png" alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain" />
 
             <div>
-              <p className="grid-headtext">Train</p>
+              <p className="grid-headtext">Train.</p>
               <p className="grid-subtext">
-              I train like as if there will be a war tomorrow.
+              I train as if there will be a war tomorrow.
               </p>
             </div>
           </div>
