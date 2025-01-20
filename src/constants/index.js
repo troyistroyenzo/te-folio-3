@@ -24,6 +24,11 @@ export const navLinks = [
     name: 'Pitch',
     href: '/pitch',
   },
+  {
+    id: 6,
+    name: 'Manifesto',
+    href: '/manifesto',
+  }
 ];
 
 export const clientReviews = [

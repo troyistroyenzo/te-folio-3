@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import type { FC } from 'react';
 import { motion, useScroll } from 'framer-motion';
 import type { MotionValue } from 'framer-motion';
+import Navbar from '../sections/Navbar';
 
 const SLIDE_URLS = [
   'https://res.cloudinary.com/dlgyqy69b/image/upload/v1736151590/1_p4bxw8.jpg',
@@ -143,6 +144,7 @@ const PitchPage: FC = () => {
 
   return (
     <div className="bg-black">
+      <Navbar />
       <ProgressBar progress={scrollYProgress} />
       <SlideCounter current={currentSlide} total={SLIDE_URLS.length} />
 

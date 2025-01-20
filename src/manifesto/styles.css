@@ -1,0 +1,93 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+/* Text gradient effect */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400;
+}
+
+/* Typography improvements */
+.manifesto-content {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth hover effects */
+.manifesto-content a {
+  @apply transition-colors duration-300;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(15, 15, 15);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(40, 40, 40);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(50, 50, 50);
+}
+
+/* Typography styles */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  @apply font-semibold mb-6;
+}
+
+.prose p {
+  @apply mb-6 text-neutral-300 leading-relaxed;
+}
+
+.prose a {
+  @apply text-blue-400 hover:text-blue-300 no-underline;
+}
+
+.prose ul,
+.prose ol {
+  @apply my-6 space-y-2;
+}
+
+.prose li {
+  @apply text-neutral-300;
+}
+
+/* Enhanced focus styles */
+:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+/* Animation utilities */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+/* Glass effect for special sections */
+.glass-panel {
+  @apply backdrop-blur-lg bg-white/5 rounded-xl border border-white/10;
+}
